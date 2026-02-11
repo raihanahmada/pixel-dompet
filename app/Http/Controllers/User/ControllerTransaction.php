@@ -41,7 +41,7 @@ class ControllerTransaction extends Controller
 
             // 2. Update Saldo di tabel Accounts
             $account = Account::find($user->id_account);
-            if ($request->tipe == 'income') {
+            if ($request->tipe == 'Pemasukan') {
                 $account->saldo += $request->jumlah;
             } else {
                 $account->saldo -= $request->jumlah;
