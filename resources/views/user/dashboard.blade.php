@@ -114,14 +114,14 @@
                     style="background: #e8f5e9; border: 4px solid var(--dark); padding: 15px; box-shadow: 4px 4px 0px var(--dark);">
                     <p class="text-sm" style="font-family: 'VT323';">TOTAL INCOME (RECENT)</p>
                     <p class="text-xl text-green-700 font-bold" style="font-family: 'VT323';">
-                        + {{ number_format($transactions->where('tipe', 'Pemasukan')->sum('jumlah'), 0, ',', '.') }}
+                        + {{ number_format($totalPemasukan, 0, ',', '.') }}
                     </p>
                 </div>
                 <div
                     style="background: #ffebee; border: 4px solid var(--dark); padding: 15px; box-shadow: 4px 4px 0px var(--dark);">
                     <p class="text-sm" style="font-family: 'VT323';">TOTAL EXPENSE (RECENT)</p>
                     <p class="text-xl text-red-700 font-bold" style="font-family: 'VT323';">
-                        - {{ number_format($transactions->where('tipe', 'Pengeluaran')->sum('jumlah'), 0, ',', '.') }}
+                        - {{ number_format($totalPengeluaran, 0, ',', '.') }}
                     </p>
                 </div>
             </div>
